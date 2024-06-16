@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# laptopdataanalysis
-=======
+
 # MyDataAnalysisProject
 
 A data analysis project to scrape and analyze laptop data from 91mobiles.com.
