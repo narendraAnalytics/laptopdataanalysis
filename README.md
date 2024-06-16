@@ -3,7 +3,7 @@
 
 A data analysis project to scrape and analyze laptop data from 91mobiles.com.
 
-![Human guiding robots in data analysis](docs/images/robot_data_analysis.png)
+![Human guiding robots in data analysis](docs/images/robot_data_analysis.png.webp)
 
 ## Table of Contents
 - [Project Description](#project-description)
