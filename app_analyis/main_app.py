@@ -7,7 +7,11 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 # Load the dataset
-file_path = '/workspaces/analysis/app_analyis/df.csv'
+#file_path = '/workspaces/laptopdataanalysis/app_analyis/df.csv'
+#df = pd.read_csv(file_path)
+
+# Load the dataset using a relative path
+file_path = os.path.join(os.path.dirname(__file__), 'df.csv')
 df = pd.read_csv(file_path)
 
 # Streamlit App
@@ -92,26 +96,6 @@ def home():
     )
     st.plotly_chart(fig_avg_price, use_container_width=True)
 
-
-
-    # Background color styling
-    st.markdown(
-        """
-        <style>
-        .main {
-            background-color: #1E1E1E;
-            color: white;
-        }
-        .css-18e3th9 {
-            color: white;
-        }
-        .css-1d391kg {
-            color: white;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
 
 def data_overview():
     st.title("Data Overview")
@@ -213,7 +197,7 @@ def brand_analysis():
     st.subheader("Price vs. Spec Score")
     fig_price_spec = px.scatter(brand_data, x='Spec_Score', y='Price', color='Series',
                                 title=f"Price vs. Spec Score for {selected_brand}",
-                                labels={"Spec_Score": "Specification Score", "Price": "Price in USD", "Series": "Laptop Series"})
+                                labels={"Spec_Score": "Specification Score", "Price": "Price in Rupees", "Series": "Laptop Series"})
     fig_price_spec.update_layout(
         plot_bgcolor="rgba(0, 0, 0, 0)",
         paper_bgcolor="rgba(0, 0, 0, 0)",
@@ -242,7 +226,7 @@ def price_analysis():
     st.subheader("Price vs. Spec Score")
     fig_price_spec = px.scatter(df, x="Spec_Score", y="Price", color="Brand",
                                 title="Price vs. Spec Score",
-                                labels={"Spec_Score": "Specification Score", "Price": "Price in USD", "Brand": "Laptop Brand"})
+                                labels={"Spec_Score": "Specification Score", "Price": "Price in Rupees", "Brand": "Laptop Brand"})
     fig_price_spec.update_layout(
         plot_bgcolor="rgba(0, 0, 0, 0)",
         paper_bgcolor="rgba(0, 0, 0, 0)",
