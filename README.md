@@ -27,7 +27,7 @@ Technologies used:
 - **Pandas**: A powerful data manipulation and analysis library.
 - **Matplotlib & Seaborn**: Libraries for data visualization.
 
-![Project Roadmap](docs/images/project_roadmap.png)
+![Project Roadmap](docs/images/project_roadmap.png.webp)
 
 ## Getting Started
 
